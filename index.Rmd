@@ -1,7 +1,7 @@
 ---
 title: "Discharge Data Example"
-author: "Matthew Ross"
-date: "1/24/2022"
+author: "Megan Sears"
+date: "`r Sys.Date()`"
 output:
   html_document:
     toc: true
@@ -67,7 +67,7 @@ ggplot(q, aes(x = Date, y = q)) +
 ```
 
 
-## Interactive Data Plotter
+# Interactive Data Plotter
 
 
 ```{r}
@@ -79,8 +79,6 @@ dygraph(q_xts) %>%
   dyAxis("y", label = "Discharge (cfs)") 
 ```
 
-
-
 # Assignment. 
 
 
@@ -89,20 +87,20 @@ RMarkdown, since we will be using Rmds as the primary form of homework and
 assignments. With that in mind, your assignment for this homework is to:
 
 
-1) Fork the example repository into your personal GitHub
+1) Fork the example repository into your personal GitHub - **DONE**
 
-2) Create an RStudio project from your Personal clone of the Repo. 
+2) Create an RStudio project from your Personal clone of the Repo. - **DONE**
 
 3) Create a table of contents that is floating, but displays three levels of
-headers instead of two (by editing the content at the beginning of the document)
+headers instead of two (by editing the content at the beginning of the document) - **DONE**
 
 4) Make a version of the `dygraph` with points and lines by using rstudio's
-dygraph [guide](https://rstudio.github.io/dygraphs/)
+dygraph [guide](https://rstudio.github.io/dygraphs/) - **DONE**
 
 5) Writing a paragraph on the Poudre river with at least three hyperlinks,
 **two bolded sections**, and one *italicized phrase*. The content of this paragraph
 is not vital, but try to at least make it true and interesting, and, of course,
-don't plagiarize. 
+don't plagiarize. **DONE**
 
 6) Knit that document, and then git commit and push to your personal GitHub.
 
@@ -119,8 +117,16 @@ todays date, not just a static date you enter.
 
 ## DyGraph example. 
 
+```{r}
+
+dygraph(q_xts) %>%
+  dyAxis("y", label = "Discharge (cfs)") %>%
+  dyOptions(drawPoints = TRUE, pointSize = 2)
+
+
+```
 
 ## Poudre Paragraph
 
-
+This is a paragraph on the **Poudre River** and I'm going to type random things. I *don't* knwo what I want to type.
 
